@@ -1,0 +1,28 @@
+{
+  "name": "web2-frontend-sabrilassouli",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EHB-MCT/web2-frontend-sabrilassouli.git"
+  },
+  "keywords": [],
+  "author": "Sabri Lassouli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EHB-MCT/web2-frontend-sabrilassouli/issues"
+  },
+  "homepage": "https://github.com/EHB-MCT/web2-frontend-sabrilassouli#readme",
+  "description": "",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
