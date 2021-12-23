@@ -1,0 +1,149 @@
+/* HEADER */
+body{
+    font-family: "HK Grotesk",sans-serif;
+    background-color: #18332C;
+    color: white;
+}
+nav{
+    font-weight: 600;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+nav li{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    padding-right: 3em;
+}
+
+
+ a:link{
+    text-decoration: none;
+    color: white;
+} 
+
+ a:visited{
+    text-decoration: none;
+    color: white;
+} 
+
+main.index{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main div:nth-child(1){
+    align-items: center;
+    display: flex;
+}
+
+nav section ul li{
+    padding-right: 1.8em;
+}
+
+nav section ul li.logo2{
+    padding-right: 3em;
+}
+/*Progress*/
+.titel h1{
+    text-align: left;
+}
+
+body > main > div > h1.progress{
+    color:#C48C4A;
+    padding: 0 1.2em;
+}
+
+
+section.progress li{
+    display: inline-block;
+    text-decoration: none;
+    justify-content: space-between;
+    padding-right: 1.8em;
+}
+
+body > main > section > ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+body > main > section.progress1 > ul{
+    list-style: none;
+}
+
+body > main > div.titel1 > h1{
+    color:#C48C4A;
+    padding: 0 0 0 2.5em;
+    font-size: 17px;
+}
+
+
+/*Calendar*/
+
+body > main > section.calendars > h3.month{
+    color:#C48C4A;
+    font-size: 20px;
+    border-top: solid white 2px;
+    border-bottom: solid white 2px;
+    padding: 0.5em 0;
+    text-align: center;
+}
+
+body > main > section.calendars > div > h1{
+    color: #C48C4A;
+    font-size: 32px;
+    padding: 0 1.2em;
+ }
+
+ body > main > section.calendar > ul > li{
+    border-top: solid white 1px;
+    font-size: 20px;
+    color:#C48C4A;
+    display: flex;
+    width: 23%;
+    margin: 0.5em 0.5em 1.2em 0.3em ;
+    padding: 0.5em 0em 2em 0em;
+ }
+
+ body > main > section.calendar > ul{
+     flex-wrap: wrap;
+     justify-content: flex-start;
+     margin-top: 3em;
+     margin: 3em 2em 0 2em;
+ }
+
+ body > main > section.calendar > ul > li > a{
+    color:#C48C4A;
+ }
+
+ body > main > section.calendars > h3{
+    margin: 0 1.2em;
+}
+
+body > main > div > h1{
+    color:#C48C4A;
+    padding: 0 1.2em;
+}
+
+/*hhh*/
+
+body > main > section > ul.addAMeal{
+    background-color: white;
+    margin: 0 2.4em;
+    height: 30em;
+    border-radius: 2em;
+}
+
+
+body > main > section > input[type=text]{
+    margin: 0 2.9em 4em;
+    padding: 0.3em 0.6em;
+    border-radius: 2em;
+}
+
