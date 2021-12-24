@@ -1,11 +1,12 @@
 let dailyTotal = [];
 let listOfNames = [];
 let userData = [];
+let currentMeal = [];
 
 window.onload = function () {
-    getDailyTotal()
-    getDailyMeals()
-    getUserInfo()
+    getDailyTotal();
+    getDailyMeals();
+    getUserInfo();
     popUp();
 
 }
@@ -108,6 +109,7 @@ async function getMealInfo() {
     const data = await response.json();
     console.log("api test")
     console.log(data)
+    currentMeal.push(data)
 
     IngredientData(data)
 
@@ -185,6 +187,7 @@ function popUp() {
 
     // Get the button that opens the modal
     var btn = document.getElementById("myBtn");
+    var btn2 = document.getElementById("myBtn2");
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
@@ -193,6 +196,10 @@ function popUp() {
     btn.onclick = function () {
         modal.style.display = "block";
         getMealInfo()
+
+    }
+    btn2.onclick = function () {
+        saveMeals()
 
     }
 
@@ -233,3 +240,54 @@ function IngredientData(data) {
     document.getElementById('popupHeader').innerHTML = header;
 
 }
+
+
+// function saveMeals(data) {
+//     const url = 'https://projectweb2sabrilassouli.herokuapp.com/meals';
+//     // post body data 
+
+//     let food = document.getElementById('userInput').value
+//     let amountOfFood = document.getElementById('foodAmount').value
+
+//     console.log("testaroni", currentMeal)
+//     const newMeal = {
+
+//         Calcium: currentMeal.totalNutrients.CA.quantity,
+//         Carbohydrate: currentMeal.totalNutrients.CHOCDF.Carbohydrate,
+//         Cholesterol: currentMeal.totalNutrients.CHOLE.Cholesterol,
+//         Energy: currentMeal.totalNutrients.ENERC_KCAL.Energy,
+//         FattyAcidsTotalMononsaturated: currentMeal.totalNutrients.FAMS.FattyAcidsTotalMononsaturated,
+//         FattyAcidsTotalPolyunsaturated: currentMeal.totalNutrients.FAPU.FattyAcidsTotalPolyunsaturated,
+//         FattyAcidsTotalSaturated: currentMeal.totalNutrients.FASAT.FattyAcidsTotalSaturated,
+//         totalLipid: currentMeal.totalNutrients.FAT.totalLipid,
+//         Iron: currentMeal.totalNutrients.FE.Iron,
+//         FiberTotal: currentMeal.totalNutrients.FIBTG.FiberTotal,
+//         FolicAcid: currentMeal.totalNutrients.FOLAC.FolicAcid,
+//         FolateDFE: currentMeal.totalNutrients.FOLDFE.FolateDFE,
+//         FolateFood: currentMeal.totalNutrients.FOLFD.FolateFood,
+//         Potassium: currentMeal.totalNutrients.K.Potassium,
+//         Magnesium: currentMeal.totalNutrients.MG.Magnesium,
+//         Sodium: currentMeal.totalNutrients.NA.Sodium,
+//         Niacin: currentMeal.totalNutrients.NIA.Niacin,
+//         Phosphorus: currentMeal.totalNutrients.P.Phosphorus,
+//         Protein: currentMeal.totalNutrients.PROCNT.Protein,
+//         Riboflavin: currentMeal.totalNutrients.RIBF.Riboflavin,
+//         SugarsTotal: currentMeal.totalNutrients.SUGAR.SugarsTotal,
+//         Thiamin: currentMeal.totalNutrients.THIA.Thiamin,
+//         VitaminE: currentMeal.totalNutrients.TOCPHA.VitaminE,
+//         VitaminA: currentMeal.totalNutrients.VITA_RAE.VitaminA,
+//         VitaminB6: currentMeal.totalNutrients.VITB6A.VitaminB6,
+//         VitaminB12: currentMeal.totalNutrients.VITB12.VitaminB12,
+//         VitaminC: currentMeal.totalNutrients.VITC.VitaminC,
+//         VitaminD: currentMeal.totalNutrients.VITD.VitaminD,
+//         VitaminK: currentMeal.totalNutrients.VITK1.VitaminK,
+//         Water: currentMeal.totalNutrients.WATER.Water,
+//         Zink: currentMeal.totalNutrients.ZN.Zink,
+//         ingredientName: food,
+//         amount: amountOfFood
+//     };
+//     console.log("step2 fav:", newMeal)
+
+    
+   
+// }
