@@ -79,12 +79,12 @@ body>main>section.progress1>ul {
     list-style: none;
 }
 
+
 body>main>div.titel1>h1 {
     color: #C48C4A;
     padding: 0 0 0 2.5em;
     font-size: 17px;
 }
-
 
 /*Calendar*/
 
@@ -136,6 +136,13 @@ body>main>div>h1 {
 /*hhh*/
 
 body>main>section>ul.addAMeal {
+    background-color: white;
+    margin: 0 2.4em;
+    color: black;
+    border-radius: 2em;
+}
+
+body>main>section>.dailyMeal {
     background-color: white;
     margin: 0 2.4em;
     color: black;

@@ -1,8 +1,11 @@
 let dailyTotal = [];
 let listOfNames = [];
+let userData = [];
 
 window.onload = function () {
-
+    getDailyTotal()
+    getDailyMeals()
+    getUserInfo()
     popUp();
 
 }
@@ -56,7 +59,6 @@ async function getDailyTotal() {
     })
     buildNutritionList()
 }
-getDailyTotal()
 async function getDailyMeals() {
     //get the list
 
@@ -77,10 +79,28 @@ async function getDailyMeals() {
     buildNameList()
     buildAmountList()
 }
-getDailyMeals()
+async function getUserInfo() {
+    //get the list
 
+    const response = await fetch(`https://projectweb2sabrilassouli.herokuapp.com/User-data`)
+    const data = await response.json();
+    console.log(data)
 
-
+    data.forEach(user => {
+        userData.push(user)
+        console.log(user);
+        console.log(`       
+        currentWeight: ${user.currentWeight},
+        exerciseFrequency: ${user.exerciseFrequency},
+        currentHeight: ${user.currentHeight},
+        lastUpdate: ${user.lastUpdate},
+        startingWeight: ${user.startingWeight},
+        weight: ${user.weight},
+        _id: ${user._id},
+        `)
+    })
+    //showUserInfo()
+}
 async function getMealInfo() {
     //get the list
     let food = document.getElementById('userInput').value
@@ -92,7 +112,6 @@ async function getMealInfo() {
     IngredientData(data)
 
 }
-
 
 function buildNutritionList() {
     let html = ``;
@@ -156,8 +175,6 @@ function buildAmountList() {
     })
     document.getElementById('amountList').innerHTML += html;
 }
-
-
 
 
 //Popup window
