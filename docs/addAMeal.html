@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/index.css">
     <link href='https://fonts.googleapis.com/css?family=Passion One' rel='stylesheet'>
+    <script src="../src/getMeals.js"></script>
     <title>Document</title>
 </head>
 
@@ -34,9 +35,35 @@
             <h1 class="addAMeal">Add a meal</h1>
         </div>
         <section class="progress">
-            <input type="text" placeholder="Search..">
+            <input type="text" id="userInput" placeholder="Search..">
+            <button id="myBtn">Open Modal</button>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                      <span class="close">&times;</span>
+                      <h2>Modal Header</h2>
+                    </div>
+                    <div class="modal-body" id="popupBody">
+                    </div>
+                    <div class="modal-footer">
+                      <h3>Modal Footer</h3>
+                    </div>
+                  </div>
+
+            </div>
             <ul class="addAMeal">
-                <li class="addAMeal"><img src="" alt=""></li>
+                <li id="mealList"><img src="" alt="">
+                    <h1>MEALS</h1>
+                </li>
+                <li id="amountList"><img src="" alt="">
+                    <h1>amount</h1>
+                </li>
+                <li id="nutritionList"><img src="" alt="">
+                    <h1>NUTRITIONAL VALUES</h1>
+                </li>
             </ul>
         </section>
 

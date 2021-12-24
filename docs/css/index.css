@@ -1,10 +1,11 @@
 /* HEADER */
-body{
-    font-family: "HK Grotesk",sans-serif;
+body {
+    font-family: "HK Grotesk", sans-serif;
     background-color: #18332C;
     color: white;
 }
-nav{
+
+nav {
     font-weight: 600;
     height: 75px;
     display: flex;
@@ -13,7 +14,7 @@ nav{
     justify-content: space-between;
 }
 
-nav li{
+nav li {
     display: inline-block;
     text-decoration: none;
     color: white;
@@ -23,62 +24,63 @@ nav li{
 }
 
 
- a:link{
+a:link {
     text-decoration: none;
     color: white;
-} 
+}
 
- a:visited{
+a:visited {
     text-decoration: none;
     color: white;
-} 
+}
 
-main.index{
+main.index {
     display: flex;
     justify-content: space-evenly;
 }
 
-main div:nth-child(1){
+main div:nth-child(1) {
     align-items: center;
     display: flex;
 }
 
-nav section ul li{
+nav section ul li {
     padding-right: 1.8em;
 }
 
-nav section ul li.logo2{
+nav section ul li.logo2 {
     padding-right: 3em;
 }
+
 /*Progress*/
-.titel h1{
+.titel h1 {
     text-align: left;
 }
 
-body > main > div > h1.progress{
-    color:#C48C4A;
+body>main>div>h1.progress {
+    color: #C48C4A;
     padding: 0 1.2em;
 }
 
 
-section.progress li{
+section.progress li {
     display: inline-block;
     text-decoration: none;
     justify-content: space-between;
     padding-right: 1.8em;
 }
 
-body > main > section > ul{
+body>main>section>ul {
     display: flex;
     justify-content: space-evenly;
 }
 
-body > main > section.progress1 > ul{
+body>main>section.progress1>ul {
     list-style: none;
 }
 
-body > main > div.titel1 > h1{
-    color:#C48C4A;
+body>main>div.titel1>h1 {
+    color: #C48C4A;
     padding: 0 0 0 2.5em;
     font-size: 17px;
 }
@@ -86,8 +88,8 @@ body > main > div.titel1 > h1{
 
 /*Calendar*/
 
-body > main > section.calendars > h3.month{
-    color:#C48C4A;
+body>main>section.calendars>h3.month {
+    color: #C48C4A;
     font-size: 20px;
     border-top: solid white 2px;
     border-bottom: solid white 2px;
@@ -95,55 +97,158 @@ body > main > section.calendars > h3.month{
     text-align: center;
 }
 
-body > main > section.calendars > div > h1{
+body>main>section.calendars>div>h1 {
     color: #C48C4A;
     font-size: 32px;
     padding: 0 1.2em;
- }
+}
 
- body > main > section.calendar > ul > li{
+body>main>section.calendar>ul>li {
     border-top: solid white 1px;
     font-size: 20px;
-    color:#C48C4A;
+    color: #C48C4A;
     display: flex;
     width: 23%;
-    margin: 0.5em 0.5em 1.2em 0.3em ;
+    margin: 0.5em 0.5em 1.2em 0.3em;
     padding: 0.5em 0em 2em 0em;
- }
+}
 
- body > main > section.calendar > ul{
-     flex-wrap: wrap;
-     justify-content: flex-start;
-     margin-top: 3em;
-     margin: 3em 2em 0 2em;
- }
+body>main>section.calendar>ul {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 3em;
+    margin: 3em 2em 0 2em;
+}
 
- body > main > section.calendar > ul > li > a{
-    color:#C48C4A;
- }
+body>main>section.calendar>ul>li>a {
+    color: #C48C4A;
+}
 
- body > main > section.calendars > h3{
+body>main>section.calendars>h3 {
     margin: 0 1.2em;
 }
 
-body > main > div > h1{
-    color:#C48C4A;
+body>main>div>h1 {
+    color: #C48C4A;
     padding: 0 1.2em;
 }
 
 /*hhh*/
 
-body > main > section > ul.addAMeal{
+body>main>section>ul.addAMeal {
     background-color: white;
     margin: 0 2.4em;
-    height: 30em;
+    color: black;
     border-radius: 2em;
 }
 
 
-body > main > section > input[type=text]{
+body>main>section>input[type=text] {
     margin: 0 2.9em 4em;
     padding: 0.3em 0.6em;
     border-radius: 2em;
 }
 
+#myModal>div {
+    margin: 15em 5em;
+    display: block;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+    display: block;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 2px 16px;
+    color: black;
+}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+#popupBody>p {
+    color: black;
+}
