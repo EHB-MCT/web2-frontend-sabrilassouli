@@ -90,6 +90,7 @@ async function getMealInfo() {
     console.log(data)
 
     IngredientData(data)
+
 }
 
 
@@ -192,8 +193,13 @@ function popUp() {
 };
 
 function IngredientData(data) {
-    nutritionList = []
+
+    let nutritionList = [];
     let html = ``;
+    let header = ``;
+    let food = document.getElementById('userInput').value
+    console.log(header += `<h1>Ingredient: ${food}</h1>`)
+
     Object.values(data.totalNutrients).forEach(val => {
         nutritionList.push(val)
         console.log(val);
@@ -205,7 +211,8 @@ function IngredientData(data) {
         html += ` 
         <H5>nutritional value: ${val.label} ${val.quantity} ${val.unit}</H5>
         `
-
     })
-    document.getElementById('popupBody').innerHTML += html;
+    document.getElementById('popupBody').innerHTML = html;
+    document.getElementById('popupHeader').innerHTML = header;
+
 }
